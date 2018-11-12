@@ -70,9 +70,23 @@ CREATE TABLE IF NOT EXISTS 'subpages' (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT = 11;
 
 --
--- Dumping data for table `users`
+-- Dumping data for table `mainpages`
 --
 
+INSERT INTO `mainpages` (`id`, `title`, `content`) VALUES
+(1, 'Home', 'This is a nice home page.'),
+(2, 'About', 'Information to find out about us.'),
+(3, 'Contact', 'Information to contact us.');
+
+--
+-- Dumping data for table `subpages`
+--
+
+INSERT INTO `subpages` (`id`, `title`, `content`) VALUES
+(1, 'History', 'The long history of things.'),
+(2, 'Mission', 'The mission statement that sounds awesome.'),
+(3, 'Locations', 'Information to find us.'),
+(4, 'Email', 'Information to email us.');
 
 
 
