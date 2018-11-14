@@ -22,7 +22,7 @@
          session_register("TestAdmin");
          $_SESSION['name'] = $myusername;
          
-         header("location: admindata.php");
+         header("location: https://www.google.com/");
       }else {
          $error = "Your Login Name or Password is invalid";
       }
