@@ -5,11 +5,11 @@
    if($_SERVER["REQUEST_METHOD"] == "POST") {
       // username and password sent from form 
       
-      $myusername = mysqli_real_escape_string($db,$_POST['name']);
+      $myusername = mysqli_real_escape_string($db,$_POST['username']);
       $mylevel = mysqli_real_escape_string($db, $_POST['level']);
       $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
       
-      $sql = "SELECT id FROM users WHERE 'name' = '$myusername'and 'level' = '$mylevel' and passcode = '$mypassword'";
+      $sql = "SELECT id FROM users WHERE 'name' = '$myusername'and 'level' = '$mylevel' and 'password' = '$mypassword'";
       $result = mysqli_query($db,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
       $active = $row['active'];
@@ -20,7 +20,7 @@
 		
       if($count == 1) {
          session_register("myusername");
-         $_SESSION['login_user'] = $myusername;
+         $_SESSION['name'] = $myusername;
          
          header("location: admindata.php");
       }else {
