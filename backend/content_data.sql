@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `subpages` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT = 11;
 
 INSERT INTO `users` (`id`, `name`, `level`,`password`) VALUES
-(1, 'Admin', 'admin', 'Test1234');
+(1, 'admin', 'admin', 'test');
 
 INSERT INTO `mainpages` (`id`, `title`, `content`) VALUES
 (1, 'Home', 'This is a nice home page.'),

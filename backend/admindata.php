@@ -1,7 +1,7 @@
 <?php
      header("Access-Control-Allow-Origin: *");
 
-     include("dbconfig");
+     include("dbconfig.php");
 
      session_start();
 
