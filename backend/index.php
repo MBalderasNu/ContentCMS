@@ -4,31 +4,7 @@
    include("dbconfig.php");
    //session_start();
 
-   if($_SERVER["REQUEST_METHOD"] == "POST") {
-      // username and password sent from form 
-      
-      $myusername = $mysqli->mysqli_real_escape_string($_POST['username']);
-      $mypassword = $mysqli->mysqli_real_escape_string($_POST['password']); 
-      
-      $sql = "SELECT * FROM users WHERE name = '$myusername' and password = '$mypassword'";
-      $result = mysqli_query($mysqli,$sql);
-      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      $active = $row['active'];
-      
-      $count = mysqli_num_rows($result);
-      
-      // If result matched $myusername and $mypassword, table row must be 1 row
-		
-      if($count == 1) {
-        // session_register("myusername");
-        // $_SESSION['login_user'] = $myusername;
-         
-        // header("Location: admindata.php");
-        echo '<script>window.location="http://abc.com"</script>';
-      }else {
-         $error = "Username or Password is invalid";
-      }
-   }
+
 
 ?>
 
