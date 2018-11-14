@@ -3,6 +3,8 @@
 
      include("dbconfig");
 
+     session_start();
+
 
 
 

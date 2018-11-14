@@ -2,6 +2,7 @@
    header("Access-Control-Allow-Origin: *");
 
    include("dbconfig");
+   session_start();
 
    if($_SERVER["REQUEST_METHOD"] == "POST") {
       // username and password sent from form 
@@ -16,8 +17,8 @@
       // If result matched $myusername and $mypassword, table row must be 1 row
 		
       if($count == 1) {
-         //session_register("myusername");
-         //$_SESSION['login_user'] = $myusername;
+         session_register("myusername");
+         $_SESSION['login_user'] = $myusername;
          
         // header("Location: admindata.php");
         //echo '<script>window.location="http://abc.com"</script>';
