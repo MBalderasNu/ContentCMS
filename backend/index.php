@@ -1,7 +1,7 @@
 <?php
    header("Access-Control-Allow-Origin: *");
 
-   include("dbconfig");
+   include("dbconfig.php");
    session_start();
 
    if($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -21,7 +21,7 @@
          $_SESSION['login_user'] = $myusername;
          
         // header("Location: admindata.php");
-        //echo '<script>window.location="http://abc.com"</script>';
+        echo '<script>window.location="http://abc.com"</script>';
       }else {
          $error = "Username or Password is invalid";
       }
