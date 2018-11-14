@@ -6,9 +6,10 @@
       // username and password sent from form 
       
       $myusername = mysqli_real_escape_string($db,$_POST['username']);
+      $mylevel = mysqli_real_escape_string($db, $_POST['level']);
       $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
       
-      $sql = "SELECT id FROM admin WHERE username = '$myusername' and passcode = '$mypassword'";
+      $sql = "SELECT id FROM users WHERE username = '$myusername'and 'level' = '$mylevel' and passcode = '$mypassword'";
       $result = mysqli_query($db,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
       $active = $row['active'];
@@ -59,6 +60,7 @@
                
                <form action = "" method = "post">
                   <label>UserName  :</label><input type = "text" name = "username" class = "box"/><br /><br />
+                  <label>Level  :</label><input type = "text" name = "level" class = "box"/><br /><br />
                   <label>Password  :</label><input type = "password" name = "password" class = "box" /><br/><br />
                   <input type = "submit" value = " Submit "/><br />
                </form>
