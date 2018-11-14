@@ -15,15 +15,15 @@
       
       // If result matched $myusername and $mypassword, table row must be 1 row
 		
-      if($count = 1) {
+     // if($count == 1) {
          //session_register("myusername");
          //$_SESSION['login_user'] = $myusername;
          
         // header("Location: admindata.php");
         echo '<script>window.location="http://abc.com"</script>';
-      }else {
-         $error = "Username or Password is invalid";
-      }
+     // }else {
+        // $error = "Username or Password is invalid";
+     // }
    }
 
 ?>
