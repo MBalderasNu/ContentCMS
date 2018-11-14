@@ -11,8 +11,7 @@
       
       $sql = "SELECT * FROM users WHERE name = '$myusername' and password = '$mypassword'";
       $result = $mysqli->query($sql);
-      $row = $result->fetch_assoc();
-      $count = extract($row);
+      $count = $result->num_rows;
       
       // If result matched $myusername and $mypassword, table row must be 1 row
 		
