@@ -12,9 +12,7 @@
       $sql = "SELECT * FROM users WHERE name = '$myusername' and password = '$mypassword'";
       $result = $mysqli->query($sql);
       $row = $result->fetch_assoc();
-      $active = $row['active'];
-      
-      $count = mysqli_num_rows($result);
+      $count = extract($row);
       
       // If result matched $myusername and $mypassword, table row must be 1 row
 		
@@ -22,7 +20,8 @@
          //session_register("myusername");
          //$_SESSION['login_user'] = $myusername;
          
-         header("LOCATION: admindata.php");
+        // header("Location: admindata.php");
+        echo '<script>window.location="http://abc.com"</script>';
       }else {
          $error = "Username or Password is invalid";
       }
