@@ -19,10 +19,10 @@
       // If result matched $myusername and $mypassword, table row must be 1 row
 		
       if($count == 1) {
-         session_register("TestAdmin");
-         $_SESSION['name'] = $myusername;
-         
-         header("location: https://www.google.com/");
+         session_register("myusername");
+         $_SESSION['login_user'] = $myusername;
+        
+        // header("location: https://www.google.com/");
       }else {
          $error = "Your Login Name or Password is invalid";
       }
