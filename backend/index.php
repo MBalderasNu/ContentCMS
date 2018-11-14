@@ -9,7 +9,7 @@
       $mylevel = mysqli_real_escape_string($db, $_POST['level']);
       $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
       
-      $sql = "SELECT id FROM users WHERE username = '$myusername'and 'level' = '$mylevel' and passcode = '$mypassword'";
+      $sql = "SELECT id FROM users WHERE 'name' = '$myusername'and 'level' = '$mylevel' and 'password' = '$mypassword'";
       $result = mysqli_query($db,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
       $active = $row['active'];
@@ -20,7 +20,7 @@
 		
       if($count == 1) {
          session_register("myusername");
-         $_SESSION['login_user'] = $myusername;
+         $_SESSION['name'] = $myusername;
          
          header("location: admindata.php");
       }else {
@@ -59,7 +59,7 @@
             <div style = "margin:30px">
                
                <form action = "" method = "post">
-                  <label>UserName  :</label><input type = "text" name = "username" class = "box"/><br /><br />
+                  <label>Username  :</label><input type = "text" name = "name" class = "box"/><br /><br />
                   <label>Level  :</label><input type = "text" name = "level" class = "box"/><br /><br />
                   <label>Password  :</label><input type = "password" name = "password" class = "box" /><br/><br />
                   <input type = "submit" value = " Submit "/><br />
