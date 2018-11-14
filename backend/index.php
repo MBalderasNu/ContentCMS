@@ -23,7 +23,7 @@
          //session_register("myusername");
         // $_SESSION['login_user'] = $myusername;
          
-         //header("location: admindata.php");
+         header("location: D:\ContentProject\ContentCMS\backend\admindata.php");
       }else {
          $error = "Your Login Name or Password is invalid";
       }
