@@ -1,13 +1,34 @@
 <?php
+   header("Access-Control-Allow-Origin: *");
 
+   include("dbconfig");
 
-
-
-
-
+   if($_SERVER["REQUEST_METHOD"] == "POST") {
+      // username and password sent from form 
+      
+      $myusername = $mysqli->mysqli_real_escape_string($_POST['username']);
+      $mypassword = $mysqli->mysqli_real_escape_string($_POST['password']); 
+      
+      $sql = "SELECT * FROM users WHERE name = '$myusername' and password = '$mypassword'";
+      $result = $mysqli->query($sql);
+      $row = $result->fetch_assoc();
+      $active = $row['active'];
+      
+      $count = mysqli_num_rows($result);
+      
+      // If result matched $myusername and $mypassword, table row must be 1 row
+		
+      if($count == 1) {
+         session_register("myusername");
+         $_SESSION['login_user'] = $myusername;
+         
+         header("LOCATION: admindata.php");
+      }else {
+         $error = "Username or Password is invalid";
+      }
+   }
 
 ?>
-
 
 <html>
    
