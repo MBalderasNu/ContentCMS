@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS `themes` (
 CREATE TABLE IF NOT EXISTS `mainpages` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `title` varchar(20) NOT NULL,
-  `content` varchar(100) NOT NULL,
+  `content` TEXT NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT = 11;
 
@@ -54,10 +54,12 @@ CREATE TABLE IF NOT EXISTS `mainpages` (
 CREATE TABLE IF NOT EXISTS `subpages` (
    `id` int(10) NOT NULL AUTO_INCREMENT,
   `title` varchar(20) NOT NULL,
-  `content` varchar(100) NOT NULL,
+  `content` TEXT NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT = 11;
 
+INSERT INTO `users` (`id`, `name`, `level`,`password`) VALUES
+(1, 'TestAdmin', 'admin', 'Test1234');
 
 INSERT INTO `mainpages` (`id`, `title`, `content`) VALUES
 (1, 'Home', 'This is a nice home page.'),
