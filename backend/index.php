@@ -23,7 +23,7 @@
          //session_register("myusername");
         // $_SESSION['login_user'] = $myusername;
          
-         header("Location: pimbladeras/ContentProject/ContentCMS/backend/admindata.php");
+         header("Location: pimbladeras/admindata.php");
       }else {
          $error = "Your Login Name or Password is invalid";
       }
