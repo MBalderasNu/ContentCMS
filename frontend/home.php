@@ -4,12 +4,8 @@ include 'dbconfig.php';
 
 //select the specific database record to update
 $query = "SELECT * FROM mainpages WHERE id = 1";
-
-//execute the query
-$result = $mysqli->query( $query );
-
-//get the result
-$row = $result->fetch_assoc();
+$result = mysqli_query($db,$query);
+$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 
 //assign the result to certain variable so our html will be filled up with values
 //$id = $row['id'];
