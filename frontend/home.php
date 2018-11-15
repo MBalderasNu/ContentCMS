@@ -12,9 +12,9 @@ $result = $mysqli->query( $query );
 $row = $result->fetch_assoc();
 
 //assign the result to certain variable so our html will be filled up with values
-$id = $row['id'];
-$title = $row['title'];
-$content = $row['content'];
+//$id = $row['id'];
+//$title = $row['title'];
+//$content = $row['content'];
 ?>
 
 <!DOCTYPE html>
