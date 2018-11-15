@@ -3,8 +3,7 @@
 include 'dbconfig.php';
 
 //select the specific database record to update
-$query = "select * from mainpages where id= 1
-limit 0,1";
+$query = "select * from mainpages where id=1";
 
 //execute the query
 $result = $mysqli->query( $query );
