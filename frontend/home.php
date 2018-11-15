@@ -8,9 +8,9 @@ $result = mysqli_query($db,$query);
 $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 
 //assign the result to certain variable so our html will be filled up with values
-//$id = $row['id'];
-//$title = $row['title'];
-//$content = $row['content'];
+$id = $row['id'];
+$title = $row['title'];
+$content = $row['content'];
 ?>
 
 <!DOCTYPE html>
