@@ -7,6 +7,10 @@
     <title>Document</title>
 </head>
 <body>
+<div class="something">
+            <div id='title0'></div>
+            <div id ='content0'></div>
+            </div>
     
 </body>
 </html>
