@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <script src="/ContentProject/ContentCMS/frontend/scripts/homepagescript.js"></script>
 </head>
 <body>
 <div class="something">
