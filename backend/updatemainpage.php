@@ -8,12 +8,12 @@ include 'dbconfig.php';
 
 $query = "update mainpages
 set
-title = '".$mysqli->real_escape_string($_POST['title'])."',
-content = '".$mysqli->real_escape_string($_POST['content'])."',
-where id='".$mysqli->real_escape_string($_REQUEST['id'])."'";
+title = '".$db->real_escape_string($_POST['title'])."',
+content = '".$db->real_escape_string($_POST['content'])."',
+where id='".$db->real_escape_string($_REQUEST['id'])."'";
 
 //execute the query
-if( $mysqli->query($query) ) {
+if( $db->query($query) ) {
 
     //if updating the record was successful
     header("Location: admindata.php"); /* Redirect browser, MUST occur before anything is output to page */
@@ -22,7 +22,9 @@ if( $mysqli->query($query) ) {
 }else{
     //if unable to update new record
     echo "Database Error: Unable to update record.";
+
+    header("Location: admindata.php");
 }
 //close database connection
-$mysqli->close();
+$db->close();
 ?>
