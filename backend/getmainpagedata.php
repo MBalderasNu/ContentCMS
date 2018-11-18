@@ -15,6 +15,5 @@ $result = $mysqli->query( $query );
 //get the result
 $row = $result->fetch_assoc();
 
-echo $row;
-//echo json_encode($row);
+echo json_encode($row);
 ?>
