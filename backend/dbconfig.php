@@ -1,8 +1,8 @@
 <?php
 
 $host = "localhost";
-$username = "matt";//can use your own username
-$password = "pass";//can use your own password
+$username = "";//can use your own username
+$password = "";//can use your own password
 $db_name = "content_data"; //database name
 //connect to mysql server
 $mysqli = new mysqli($host, $username, $password, $db_name);

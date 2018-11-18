@@ -4,7 +4,7 @@ var request = new XMLHttpRequest();
 loadData();
  
 function loadData() {
-  request.open('GET', 'http://pimbalderas/ContentProject/ContentCMS/backend/getmainpagedata.php?id=1');
+  request.open('GET', 'http://localhost/lab3/ContentCMS/backend/getmainpagedata.php?id=1');
   request.onload = loadComplete;
   request.send();
 }
