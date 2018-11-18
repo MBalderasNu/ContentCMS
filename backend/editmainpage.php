@@ -20,6 +20,18 @@ $content = $row['content'];
 ?>
 
 <h3>Update Page Content</h3>
+<style type = "text/css">
+    form {
+    width:100%;
+    height:450px;
+    margin:auto;
+    position:relative;
+    }
+    input {
+    width:100%;
+    height: 25px;
+   }
+      </style>
 <form id="form" action="updatemainpage.php" method="post">
     <input type="hidden" name="id" value='<?php echo $id;  ?>'/>
   <label for="title">Title: </label>
