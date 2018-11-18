@@ -22,8 +22,6 @@ if( $db->query($query) ) {
 }else{
     //if unable to update new record
     echo "Database Error: Unable to update record.";
-
-    header("Location: admindata.php");
 }
 //close database connection
 $db->close();
