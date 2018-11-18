@@ -1,3 +1,4 @@
+<h1>Control Panel</h1>
 <h3>List of All Pages</h3>
 
 <table class="mainpagetable">
