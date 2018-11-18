@@ -99,7 +99,5 @@ $mysqli->close();
 ?>  
 </table>
 
-<p>Click <a href="http://www.yahoo.com">here</a> to go to yahoo.</p>
-
 
 
