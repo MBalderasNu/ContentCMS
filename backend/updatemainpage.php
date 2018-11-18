@@ -9,7 +9,7 @@ include 'dbconfig.php';
 $query = "update mainpages
 set
 title = '".$db->real_escape_string($_POST['title'])."',
-content = '".$db->real_escape_string($_POST['content'])."',
+content = '".$db->real_escape_string($_POST['content'])."'
 where id='".$db->real_escape_string($_REQUEST['id'])."'";
 
 //execute the query

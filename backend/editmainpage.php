@@ -3,8 +3,7 @@
 include 'dbconfig.php';
 
 //select the specific database record to update
-$query = "select id, title, content
-from mainpages
+$query = "select * from mainpages
 where id='".$mysqli->real_escape_string($_REQUEST['id'])."'
 limit 0,1";
 
