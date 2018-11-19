@@ -1,3 +1,14 @@
 body {
   background-color: #ea9c55;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  width: 80%;
+  margin: auto;
+}
+
+.something {
+  width: 75%;
+  margin: auto;
 }

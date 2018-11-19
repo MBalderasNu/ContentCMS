@@ -4,7 +4,7 @@ var request = new XMLHttpRequest();
 loadData();
  
 function loadData() {
-  request.open('GET', 'http://pimbalderas/ContentProject/ContentCMS/backend/getsubpagedata.php?id=3');
+  request.open('GET', 'http://localhost/lab3/ContentCMS/backend/getsubpagedata.php?id=3');
   request.onload = loadComplete;
   request.send();
 }
