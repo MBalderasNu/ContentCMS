@@ -113,6 +113,6 @@ $mysqli->close();
 
 ?>  
 </table>
-
+<p><a href = "logout.php">Sign Out</a></p>
 
 
